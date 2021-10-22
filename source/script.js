@@ -38,14 +38,28 @@ function displayCurrentWeather(response) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let cityName = "New York";
-let apiKey = "745e466f4597986491c458e2888a3c22";
-let endPoint = "https://api.openweathermap.org/data/2.5/weather?";
-let apiUrl = `${endPoint}q=${cityName}&units=metric&appid=${apiKey}`;
+function searchCity(event) {
+  event.preventDefault();
+  let cityInputValue = document.querySelector("#city-input").value;
+  let apiKey = "745e466f4597986491c458e2888a3c22";
+  let endPoint = "https://api.openweathermap.org/data/2.5/weather?";
+  let apiUrl = `${endPoint}q=${cityInputValue}&units=metric&appid=${apiKey}`;
 
-axios.get(apiUrl).then(displayCurrentWeather);
+  axios.get(apiUrl).then(displayCurrentWeather);
+}
+
+let searchForm = document.querySelector("#search-city-form");
+searchForm.addEventListener("submit", searchCity);
+
+window.addEventListener("load", (event) => {
+  let cityInputValue = "Stockholm";
+  let apiKey = "745e466f4597986491c458e2888a3c22";
+  let endPoint = "https://api.openweathermap.org/data/2.5/weather?";
+  let apiUrl = `${endPoint}q=${cityInputValue}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayCurrentWeather);
+});
