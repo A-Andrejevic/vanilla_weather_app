@@ -22,6 +22,7 @@ function formatDate(timestamp) {
 }
 
 function displayCurrentWeather(response) {
+  console.log(response);
   let cityElement = document.querySelector("h1");
   cityElement.innerHTML = response.data.name;
   let temperatureElement = document.querySelector("#temperature");
@@ -34,6 +35,12 @@ function displayCurrentWeather(response) {
   windElement.innerHTML = response.data.wind.speed;
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let cityName = "New York";
