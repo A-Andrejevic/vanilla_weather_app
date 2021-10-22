@@ -1,10 +1,12 @@
 body {
   font-family: "Noto Sans Mono", monospace;
+  background-image: url("D:/Lola_Files/SheCodes/Plus/vanilla_weather_app/source/space.jpg");
 }
 
 h1 {
   text-align: center;
   line-height: 40px;
+  color: white;
 }
 ul {
   margin: 0;
@@ -22,6 +24,7 @@ small {
 }
 
 .weather-app-box {
+  background-color: black;
   border: solid;
   border-color: blue;
   border-radius: 15px;
@@ -29,6 +32,7 @@ small {
   margin: 30px auto;
   margin-top: 80px;
   padding: 10px;
+  color: white;
 }
 
 .current-temperature img {
@@ -47,4 +51,8 @@ small {
   position: relative;
   font-size: 16px;
   top: -35px;
+}
+
+#weather-description {
+  text-transform: capitalize;
 }

@@ -17,35 +17,31 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/202795d922.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-box">
-        <h1>Stockholm</h1>
+        <h1></h1>
         <ul>
-          <li>Time</li>
-          <li>Sunny</li>
+          <li id="time"></li>
+          <li id="weather-description">Sunny</li>
         </ul>
         <div class="row">
           <div class="col-6">
             <div class="clearfix current-temperature">
               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
               <div class="float-left">
-                <strong>12</strong
+                <strong id="temperature">12</strong
                 ><span class="weather-units">°C |<a href="#">°F</a></span>
               </div>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation: 5%</li>
-              <li>Humidity: 50%</li>
-              <li>Wind: 10 km/h</li>
+              <li>Humidity: <span id="humidity">50</span>%</li>
+              <li>Wind: <span id="wind">10</span> km/h</li>
             </ul>
           </div>
         </div>
