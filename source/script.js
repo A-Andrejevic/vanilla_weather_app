@@ -22,7 +22,7 @@ function formatDate(timestamp) {
 }
 
 function displayCurrentWeather(response) {
-  console.log(response);
+  celsiusTemperature = response.data.main.temp;
   let cityElement = document.querySelector("h1");
   cityElement.innerHTML = response.data.name;
   let temperatureElement = document.querySelector("#temperature");
@@ -55,6 +55,28 @@ function searchCity(event) {
 
 let searchForm = document.querySelector("#search-city-form");
 searchForm.addEventListener("submit", searchCity);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+function convertToCelsius(event) {
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemperature = null;
 
 window.addEventListener("load", (event) => {
   let cityInputValue = "Stockholm";
