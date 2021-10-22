@@ -20,7 +20,7 @@ li {
 small {
   display: block;
   text-align: center;
-  color: blueviolet;
+  color: rgb(33, 7, 58);
 }
 
 .weather-app-box {
@@ -51,6 +51,7 @@ small {
   position: relative;
   font-size: 16px;
   top: -35px;
+  text-decoration: none;
 }
 
 #weather-description:first-letter {
@@ -70,4 +71,10 @@ small {
 #search-button {
   border-radius: 10px;
   text-align: center;
+}
+
+.current-temperature .active {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
