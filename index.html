@@ -21,54 +21,60 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app-box">
-        <form id="search-city-form">
-          <input type="search" placeholder="Enter city here" id="city-input" />
-          <input type="submit" value="Search" id="search-button" />
-        </form>
-        <h1></h1>
-        <ul>
-          <li>Last updated: <span id="time"></span></li>
-          <li id="weather-description">Sunny</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix current-temperature">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                id="weather-icon"
-              />
-              <div class="float-left">
-                <strong id="temperature">12</strong
-                ><span class="weather-units"
-                  ><a href="#" id="celsius" class="active">°C</a> |<a
-                    href="#"
-                    id="fahrenheit"
-                    class="active"
-                    >°F</a
-                  ></span
-                >
+    <div class="bg-container">
+      <div class="container">
+        <div class="weather-app-box">
+          <form id="search-city-form">
+            <input
+              type="search"
+              placeholder="Enter city here"
+              id="city-input"
+            />
+            <input type="submit" value="Search" id="search-button" />
+          </form>
+          <h1></h1>
+          <ul>
+            <li>Last updated: <span id="time"></span></li>
+            <li id="weather-description">Sunny</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix current-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  id="weather-icon"
+                />
+                <div class="float-left">
+                  <strong id="temperature">12</strong
+                  ><span class="weather-units"
+                    ><a href="#" id="celsius" class="active">°C</a> |<a
+                      href="#"
+                      id="fahrenheit"
+                      class="active"
+                      >°F</a
+                    ></span
+                  >
+                </div>
               </div>
             </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity">50</span>%</li>
+                <li>Wind: <span id="wind">10</span> km/h</li>
+              </ul>
+            </div>
+            <div class="weather-forecast" id="forecast-element"></div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity">50</span>%</li>
-              <li>Wind: <span id="wind">10</span> km/h</li>
-            </ul>
-          </div>
-          <div class="weather-forecast" id="forecast-element"></div>
         </div>
+        <small>
+          <a
+            href="https://github.com/A-Andrejevic/vanilla_weather_app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Aleksandra Andrejevic.
+        </small>
       </div>
-      <small>
-        <a
-          href="https://github.com/A-Andrejevic/vanilla_weather_app"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Aleksandra Andrejevic.
-      </small>
     </div>
     <script src="source/script.js"></script>
   </body>

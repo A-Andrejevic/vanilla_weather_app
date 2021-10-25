@@ -29,8 +29,6 @@ function formatForecastDay(timestamp) {
 }
 
 function fetchForecast(coordinates) {
-  console.log(coordinates);
-
   let apiKey = "745e466f4597986491c458e2888a3c22";
   let endPoint = "https://api.openweathermap.org/data/2.5/onecall?";
   let latitude = coordinates.lat;
@@ -139,6 +137,5 @@ window.addEventListener("load", (event) => {
   let endPoint = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${endPoint}q=${cityInputValue}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayCurrentWeather);
+  displayWeatherForecast();
 });
-
-displayWeatherForecast();
