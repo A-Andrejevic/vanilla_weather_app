@@ -51,6 +51,8 @@ function displayCurrentWeather(response) {
   windElement.innerHTML = response.data.wind.speed;
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
+  let feelingElement = document.querySelector("#feels-like");
+  feelingElement.innerHTML = Math.round(response.data.main.feels_like);
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
