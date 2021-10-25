@@ -36,6 +36,19 @@ small {
   text-align: center;
   color: rgb(33, 7, 58);
 }
+button {
+  float: right;
+  margin-top: -65px;
+  border-radius: 10px;
+
+  font-size: 20px;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background-color: #ec6e4c;
+  color: white;
+}
 
 .weather-app-box {
   background-color: black;
@@ -74,7 +87,7 @@ small {
 
 #search-city-form {
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   padding: 30px;
 }
 
@@ -85,6 +98,12 @@ small {
 #search-button {
   border-radius: 10px;
   text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+#search-button:hover {
+  background-color: #ec6e4c;
+  color: white;
 }
 
 .current-temperature .active {

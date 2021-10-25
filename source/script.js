@@ -139,3 +139,18 @@ window.addEventListener("load", (event) => {
   axios.get(apiUrl).then(displayCurrentWeather);
   displayWeatherForecast();
 });
+
+function displayUserLocation(position) {
+  let apiKey = "745e466f4597986491c458e2888a3c22";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayCurrentWeather);
+}
+
+function fetchUserLocation() {
+  navigator.geolocation.getCurrentPosition(displayUserLocation);
+}
+
+let locationButton = document.querySelector("button");
+locationButton.addEventListener("click", fetchUserLocation);
