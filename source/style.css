@@ -75,11 +75,11 @@ button:hover {
   line-height: 1;
 }
 
-.weather-units {
+#celsius {
   position: relative;
   font-size: 16px;
   top: -35px;
-  text-decoration: none;
+  font-weight: bold;
 }
 
 #weather-description:first-letter {
