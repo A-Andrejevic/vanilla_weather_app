@@ -29,6 +29,7 @@ ul {
 li {
   list-style: none;
   line-height: 1.5;
+  color: #ec6e4c;
 }
 
 small {
@@ -119,4 +120,8 @@ button:hover {
 
 .lowest-temperature {
   color: grey;
+}
+
+#last-updated {
+  color: white;
 }
