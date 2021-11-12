@@ -36,11 +36,13 @@ small {
   display: block;
   text-align: center;
   color: black;
+  font-weight: 500;
 }
 
 small a {
+  font-weight: normal;
   text-decoration: none;
-  color: #682311;
+  color: #b9c516;
 }
 button {
   float: right;
@@ -54,6 +56,21 @@ button {
 button:hover {
   background-color: #ec6e4c;
   color: white;
+}
+
+@media (max-width: 750px) {
+  button {
+    margin-top: -20px;
+    margin-left: 100px;
+    float: left;
+  }
+  #search-button {
+    margin-top: 10px;
+    margin-left: 90px;
+  }
+  h1 {
+    margin-top: 60px;
+  }
 }
 
 .weather-app-box {
